@@ -13,11 +13,9 @@ GS2_HMSB=framebuf.GS2_HMSB
 GS4_HMSB=framebuf.GS4_HMSB
 GS8=framebuf.GS8
 
-
 class FrameBuffer(framebuf.FrameBuffer):
 
     def large_text(self, s, x, y, m, c=1):
-        
         smallbuffer=bytearray(8)
         letter=framebuf.FrameBuffer(smallbuffer,8,8,framebuf.MONO_HMSB)
         for character in s:
