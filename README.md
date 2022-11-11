@@ -3,7 +3,7 @@
 ## MicroPython FrameBuffer larger font extension
 
 This module extends MicroPython's [framebuf module](https://docs.micropython.org/en/latest/library/framebuf.html "MicroPython documentation"). It provides double, triple and quadruple size rendering of text using the built-in font provided in the framebuf module. 
-The module has been tested on a Raspberry Pi Pico with a SH107 display.
+The module has been tested on a Raspberry Pi Pico with a SH1107 display.
 
 ## Methods
 
@@ -15,7 +15,7 @@ Example use:
 ```
     # display is a framebuffer object
     display.large_text('double', 0, 0, 2, 1)  # double size text
-    display.large_text('size!', 0, 0, 2, 1)
+    display.large_text('size!', 0, 16, 2, 1)
     display.large_text('HUGE', 0, 32, 4, 1)   # quadruple size text
 ```
 
