@@ -1,12 +1,15 @@
 # this code is distributed under the MIT licence.
-# frambuf2 v008
-# (c) 2022 Peter Lumb (peter-l5) 
+# frambuf2 v101
+# (c) 2022-2023 Peter Lumb (peter-l5) 
+
+__version__ = "v101"
+__repo__ = "https://github.com/peter-l5/framebuf2"
 
 import framebuf
 
 # constants available in MicroPython 1.19.1
-MONO_HMSB=framebuf.MONO_HMSB
 MONO_VLSB=framebuf.MONO_VLSB
+MONO_HLSB=framebuf.MONO_HLSB
 MONO_HMSB=framebuf.MONO_HMSB
 RGB565=framebuf.RGB565
 GS2_HMSB=framebuf.GS2_HMSB
