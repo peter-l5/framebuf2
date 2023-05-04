@@ -1,7 +1,7 @@
 # this code is distributed under the MIT licence.
 
 """
-frambuf2 v206: micropython framebuffer extensions
+frambuf2 v208: micropython framebuffer extensions
 (c) 2022-2023 Peter Lumb (peter-l5)
 
 acknowledgement
@@ -15,7 +15,7 @@ Author: Tony DiCola (original GFX author Phil Burgess)
 License: MIT License (https://opensource.org/licenses/MIT)
 """
 
-__version__ = "v206"
+__version__ = "v208"
 __repo__ = "https://github.com/peter-l5/framebuf2"
 
 import framebuf
@@ -152,7 +152,6 @@ class FrameBuffer(framebuf.FrameBuffer):
                 x0, x1 = x1, x0
             a = 0
             b = 0
-            y = 0
             last = 0
             if y0 == y2:
                 a = x0
@@ -181,11 +180,12 @@ class FrameBuffer(framebuf.FrameBuffer):
                 dy12 = 1
             sa = 0
             sb = 0
-            if y1 == y2:
-                last = y1
+            y = y0
+            if y0 == y1:
+                last = y1 - 1
             else:
-                last = y1-1
-            for y in range(y0, last+1):
+                last = y1
+            while y <= last: 
                 a = x0 + sa // dy01
                 b = x0 + sb // dy02
                 sa += dx01
@@ -193,6 +193,7 @@ class FrameBuffer(framebuf.FrameBuffer):
                 if a > b:
                     a, b = b, a
                 self.hline(a, y, b-a+1, c)
+                y += 1
             sa = dx12 * (y - y1)
             sb = dx02 * (y - y0)
             while y <= y2:
