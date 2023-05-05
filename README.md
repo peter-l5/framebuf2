@@ -60,7 +60,7 @@ Works with MicroPython version 1.19.1. Will also work with other versions.
 #### v206
 
 - large_text() enhanced by the addition of rotation parameter 
-- substantial speed improvements
+- substantial speed improvements  to the large_text() method
 
 #### v202
 
