@@ -8,15 +8,15 @@ The module has been tested on a Raspberry Pi Pico with a 128x128 pixel SH1107 di
 
 ## Methods
 
-`large_text(s, x, y, m [, c=1] [, r=0 [, t=None]])` 
+**`large_text(s, x, y, m [, c=1] [, r=0 [, t=None]])`**
 
 Write text, `s`, to a FrameBuffer using the the `x` and `y` coordinates as the upper-left corner of the text. The colour of the text can be defined by the optional argument, `c`, but is otherwise a default value of 1. The parameter `m` sets the size multiple for the text. The normal size for text with the 'FrameBuffer.text()' method is 8x8 pixels. This would be a multiple of 1. To obtain larger text output, with 16x16 pixel characters, for example, use 2 for the m parameter. The optional parameter r controls the rotation of the text, 0 degrees is the default, 90, 180 and 270 degrees are possible. In addition the t parameter enables individual characters within a string to be independently rotated to 0, 90, 180 or 270 degrees. 
 
-`circle(x0, y0, radius, c [, f:bool] )` 
+**`circle(x0, y0, radius, c [, f:bool] )`** 
 
 Draw a circle centred on `x0, y0` with the specified `radius` and border colour, `c` (integer). Optionally fill the circle by adding `f=True`.
 
-`triangle(x0, y0, x1, y1, x2, y2, c [, f:bool] )` 
+**`triangle(x0, y0, x1, y1, x2, y2, c [, f:bool] )`**
 
 Draw a triangle with vertices at points `x0,y0` , `x1,y1` and `x2,y2` and border colour, `c` (integer). Optionally fill the circle by adding `f=True`.
 
@@ -52,10 +52,15 @@ Works with MicroPython version 1.19.1. Will also work with other versions.
 
 ## Release notes
 
+#### v208
+
+- fix for issue #1
+- fix for an issue where filled triangles were not drawn properly around the middle vertex (middle in vertical order)  
+
 #### v206
 
 - large_text() enhanced by the addition of rotation parameter 
-- substantial speed improvements to the large_text() method
+- substantial speed improvements  to the large_text() method
 
 #### v202
 
