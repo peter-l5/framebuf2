@@ -52,6 +52,10 @@ Works with MicroPython version 1.19.1. Will also work with other versions.
 
 ## Release notes
 
+#### v209
+
+- code formatted to [PEP8](https://peps.python.org/pep-0008/) standards using [black](https://pypi.org/project/black/)
+
 #### v208
 
 - fix for issue #1
