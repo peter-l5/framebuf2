@@ -1,6 +1,6 @@
 # framebuf2
 
-## MicroPython FrameBuffer larger font, triangle and circle extension
+## MicroPython FrameBuffer large and rotated font, triangle and circle extension
 
 This module extends the `FrameBuffer` class in MicroPython's [framebuf module](https://docs.micropython.org/en/latest/library/framebuf.html "MicroPython documentation"). It enables drawing of double, triple, quadruple, and larger size text to FrameBuffer objects using the built-in font provided in the framebuf module.<br> 
 Also included are methods to draw triangles and circles. These can be outlines only or filled.<br>
